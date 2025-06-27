@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="trivia_gui.View.UserControls.QuestionLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:trivia_gui.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Body -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="120*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="QuestionGrid" Background="White" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tbTimer"
+                       Grid.Row="0"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,-15,0,0"
+                       Foreground="Gray"/>
+
+                <TextBlock x:Name="tbQuestionPlaceholder" Style="{StaticResource HeaderText}" Grid.Row="0" Grid.Column="0" FontSize="14" MaxWidth="600" TextWrapping="Wrap" Text="{Binding QuestionPlaceHolder}"/>
+                <TextBlock x:Name="ErrorText" Style="{StaticResource ErrorText}" Grid.Row="1" Text="Click on the correct answer:" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
+

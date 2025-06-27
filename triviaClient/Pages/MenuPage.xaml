@@ -1,0 +1,53 @@
+﻿<Page x:Class="trivia_gui.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:trivia_gui.Pages"
+      xmlns:UserControls="clr-namespace:trivia_gui.View.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="MenuPage">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="120*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Background="White" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="ErrorText" Style="{StaticResource ErrorText}" VerticalAlignment="Bottom" Grid.Row="7" Text="" />
+                <Button Grid.Row="1" Style="{StaticResource MenuButton}" x:Name="CreateRoomButton" Click="CreateRoomButton_Click">Create Room</Button>
+                <Button Grid.Row="2" Style="{StaticResource MenuButton}" x:Name="JoinRoomButton" Click="JoinRoomButton_Click">Join Room</Button>
+                <Button Grid.Row="3" Style="{StaticResource MenuButton}" x:Name="MyStatusButton" Click="MyStatusButton_Click">My Status</Button>
+                <Button Grid.Row="4" Style="{StaticResource MenuButton}" x:Name="BestScoresButton" Click="BestScoresButton_Click">Best Scores</Button>
+                <Button Grid.Row="5" Style="{StaticResource MenuButton}" x:Name="LogoutButton" Click="LogoutButton_Click">Logout</Button>
+                <Button Grid.Row="9" Style="{StaticResource CommitButton}" Width="60" x:Name="ExitButton" Click="ExitButton_Click">Exit</Button>
+            </Grid>
+        </Grid>
+
+        <UserControls:PageBase Grid.RowSpan="3" />
+
+    </Grid>
+</Page>

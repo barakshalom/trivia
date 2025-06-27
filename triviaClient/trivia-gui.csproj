@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>trivia_gui</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="View\images\Logo.ico" />
+    <None Remove="View\images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\images\Logo.ico" />
+    <Resource Include="View\images\Logo.png" />
+  </ItemGroup>
+
+</Project>
